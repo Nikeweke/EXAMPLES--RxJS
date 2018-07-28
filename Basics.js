@@ -6,6 +6,8 @@ const Rx = require('rx')
 // * Observer -  is a consumer of values delivered by an Observable.
 // * Subscription -its object that we have after subscribing on observable, that have only unsubscribe(dispose) method
 
+// ALL STARTS FROM OBSERVABLE ! 
+
 // Observable 
 // inside func there are 3 methods that provides observer: next(), error(), complete()
 let observable = Rx.Observable.create((obs) => {
