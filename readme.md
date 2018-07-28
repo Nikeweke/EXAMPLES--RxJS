@@ -84,6 +84,7 @@ console.log('after');
 ```
 
 ### Of, from
+> make from array events 
 ```js
 var observable = Rx.Observable.of([10, 20, 30]);
 // OR
@@ -108,15 +109,16 @@ setTimeout(() => {
 ```
 
 ### Subject
+> makes a few different handlers to a observables
 ```js
 var subject = new Rx.Subject();
 
-subject.subscribe({
-  next: (v) => console.log('observerA: ' + v)
-});
-subject.subscribe({
-  next: (v) => console.log('observerB: ' + v)
-});
+subject.subscribe(
+  (v) => console.log('observerA: ' + v)
+);
+subject.subscribe(
+  (v) => console.log('observerB: ' + v)
+);
 
 subject.next(1);
 subject.next(2);
