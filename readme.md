@@ -2,6 +2,12 @@
 
 **Manuals** - http://reactivex.io/rxjs/manual/overview.html#flow
 
+
+<p align="center" style="text-align:center;">
+  <img src="https://github.com/Nikeweke/RxJS/blob/master/schema-rxjs.png?raw=true" width="600" />
+</p>
+
+
 #### Содержание
 * Install and use
 * Observable.create
