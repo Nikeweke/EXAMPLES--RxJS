@@ -27,12 +27,13 @@ npm i rx -S
 
 ### Observable create
 ```js
-let source = rx.Observable.create((obs) => {
+// observable can be called - source
+let observable = rx.Observable.create((obs) => {
   obs.onNext('asdasd')
   obs.onCompleted()
 })
 
-source.subscribe(
+observable.subscribe(
   (x)   => console.log(x),
   (err) => console.log(err),
   ()    => console.log('completed')
