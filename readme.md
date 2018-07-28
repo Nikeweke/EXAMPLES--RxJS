@@ -86,7 +86,7 @@ console.log('after');
 ### Of, from
 > make from array events 
 ```js
-var observable = Rx.Observable.of([10, 20, 30]);
+var observable = Rx.Observable.of(10, 20, 30);
 // OR
 var observable = Rx.Observable.from([10, 20, 30]);
 
