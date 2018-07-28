@@ -5,6 +5,7 @@
 #### Содержание
 * Install
 * Observable.create
+* Observer.create
 * Interval
 * Scan
 * Sync and async execution 
@@ -24,7 +25,7 @@ npm i rx -S
 * **Observer** - are just objects with three callbacks, one for each type of notification that an Observable may deliver. 
 * **Subject** - is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
 
-### Observer create
+### Observable create
 ```js
 let source = rx.Observable.create((obs) => {
   obs.onNext('asdasd')
@@ -36,6 +37,24 @@ source.subscribe(
   (err) => console.log(err),
   ()    => console.log('completed')
 )
+```
+
+
+
+### Observer create
+```js
+var observer = Rx.Observer.create(
+    function (x) {
+      console.log('Next: %s', x);
+    },
+    function (err) {
+      console.log('Error: %s', err);
+    },
+    function () {
+      console.log('Completed');
+    }
+);
+observable.subscribe(observer)
 ```
 
 ### Interval 
