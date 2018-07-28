@@ -4,7 +4,7 @@
 
 
 <p align="center" style="text-align:center;">
-  <img src="https://github.com/Nikeweke/RxJS/blob/master/schema-rxjs.png?raw=true" width="600" />
+  <img src="https://github.com/Nikeweke/RxJS/blob/master/schema-rxjs.png?raw=true" width="800" />
 </p>
 
 
