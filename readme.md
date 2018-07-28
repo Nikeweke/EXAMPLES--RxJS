@@ -3,20 +3,25 @@
 **Manuals** - http://reactivex.io/rxjs/manual/overview.html#flow
 
 #### Содержание
-* Install
+* Install and use
 * Observable.create
 * Observer.create
 * Interval
 * Scan
 * Sync and async execution 
 * Of, from
+* fromPromise
 * Subscribe and unsubscribe
 * Subject
 --- 
 
-### Install 
+### Install and use 
 ```
 npm i rx -S
+```
+
+```js
+const Rx = require('rx')
 ```
 
 #### Basics
@@ -111,6 +116,27 @@ var observable = Rx.Observable.of(10, 20, 30);
 var observable = Rx.Observable.from([10, 20, 30]);
 
 // 10 , 20, 30
+```
+
+### fromPromise
+```js
+let promise = new Promise((r, j, obs)=> {
+    // j('hell reject')
+    setTimeout(() => r('data received'), 3000)
+})
+.then(
+    // on resolve() 
+    (data) => { console.log('here --', data); return 'resolved' },
+
+    // on reject()
+    (err) =>  { console.log('Error --', err); return 'rejected' },
+)
+
+let source = Rx.Observable.fromPromise(promise)
+
+source.subscribe(
+    console.log                        
+)
 ```
 
 ### Subscribe and unsubscribe
