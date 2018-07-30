@@ -159,6 +159,16 @@ setTimeout(() => {
   subscription.dispose()
   console.log('Unsubscribe')
 }, 6001)
+
+var subscription2 = observable.subscribe(
+  x => console.log(x),
+  err => console.log(err),
+  () => {
+    console.log('complete')
+    subscription2.dispose() // unsubscribe
+   } 
+)
+
 ```
 
 ### Subject
