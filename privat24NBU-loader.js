@@ -14,7 +14,6 @@ const FIRST_DELAY = 0
 const DELAY       = 10000
 const ALL_DATA    = []  // данные полученные с запросов успешно
 
-// START HERE
 console.log('START HERE')
 getArchives()
 
