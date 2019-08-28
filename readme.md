@@ -1,7 +1,7 @@
 # RxJS
 
-**Manuals** - http://reactivex.io/rxjs/manual/overview.html#flow
-**Six operators to know** - https://netbasal.com/rxjs-six-operators-that-you-must-know-5ed3b6e238a0
+* **Manuals** - http://reactivex.io/rxjs/manual/overview.html#flow
+* **Six operators to know** - https://netbasal.com/rxjs-six-operators-that-you-must-know-5ed3b6e238a0
 
 
 <p align="center" style="text-align:center;">
